@@ -1,0 +1,30 @@
+{
+  "name": "releases-retry",
+  "version": "1.0.0",
+  "description": "Retry failed release-phase commands",
+  "main": "index.js",
+  "author": "Damien MATHIEU @dmathieu",
+  "repository": "heroku/releases-retry",
+  "bugs": {
+    "url": "https://github.com/heroku/releases-retry/issues"
+  },
+  "keywords": [
+    "heroku-plugin"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "test": "TZ=utc nyc mocha && standard",
+    "preversion": "npm test",
+    "postversion": "npm publish && git push && git push --tags"
+  },
+  "dependencies": {
+    "heroku-cli-util": "6.0.16",
+    "co": "4.6.0"
+  },
+  "devDependencies": {
+    "mocha": "3.1.2",
+    "nock": "9.0.2",
+    "nyc": "8.4.0",
+    "standard": "8.5.0"
+  }
+}

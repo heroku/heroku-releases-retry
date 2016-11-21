@@ -1,4 +1,4 @@
-# Releases Retry [![Build Status](https://travis-ci.org/heroku/releases-retry.svg?branch=master)](https://travis-ci.org/heroku/releases-retry)
+# Releases Retry [![Build Status](https://travis-ci.org/heroku/heroku-releases-retry.svg?branch=master)](https://travis-ci.org/heroku/releases-retry)
 
 This plugin is meant to be used with apps using [Release Phase](https://devcenter.heroku.com/articles/release-phase).  
 It will take the latest release in an app, and create a new one identical to it. That will trigger a new release-phase command, allowing for retrying them.
@@ -7,7 +7,7 @@ It will take the latest release in an app, and create a new one identical to it.
 
 Run the following command:
 
-> heroku plugins:install releases-retry
+> heroku plugins:install heroku-releases-retry
 
 ## Usage
 

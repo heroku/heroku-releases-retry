@@ -1,5 +1,5 @@
 {
-  "name": "releases-retry",
+  "name": "heroku-releases-retry",
   "version": "1.0.0",
   "description": "Retry failed release-phase commands",
   "main": "index.js",

@@ -4,9 +4,9 @@
   "description": "Retry failed release-phase commands",
   "main": "index.js",
   "author": "Damien MATHIEU @dmathieu",
-  "repository": "heroku/releases-retry",
+  "repository": "heroku/heroku-releases-retry",
   "bugs": {
-    "url": "https://github.com/heroku/releases-retry/issues"
+    "url": "https://github.com/heroku/heroku-releases-retry/issues"
   },
   "keywords": [
     "heroku-plugin"

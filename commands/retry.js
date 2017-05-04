@@ -31,5 +31,5 @@ module.exports = {
   help: 'Copies the latest release into a new one, retrying the latest release-phase command.',
   needsApp: true,
   needsAuth: true,
-  run: cli.command(co.wrap(run))
+  run: cli.command({preauth: true}, co.wrap(run))
 }

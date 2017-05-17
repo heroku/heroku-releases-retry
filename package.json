@@ -18,13 +18,15 @@
     "postversion": "npm publish && git push && git push --tags"
   },
   "dependencies": {
-    "heroku-cli-util": "6.0.16",
-    "co": "4.6.0"
+    "co": "4.6.0",
+    "heroku-cli-util": "6.0.16"
   },
   "devDependencies": {
+    "chai": "^3.3.0",
     "mocha": "3.1.2",
     "nock": "9.0.2",
     "nyc": "8.4.0",
-    "standard": "8.5.0"
+    "standard": "8.5.0",
+    "std-mocks": "1.0.1"
   }
 }

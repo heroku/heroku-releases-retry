@@ -13,6 +13,10 @@ function * run (context, heroku) {
   }
   let release = yield getLatestRelease()
 
+  if (!release) {
+    return cli.error('No release found for this app')
+  }
+
   let retry = yield cli.action(`Retrying ${cli.color.green('v' + release.version)} on ${cli.color.app(context.app)}`, {success: false}, co(function * () {
     let r = yield heroku.post(`/apps/${context.app}/releases`, {
       body: {

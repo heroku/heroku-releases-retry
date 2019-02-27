@@ -10,6 +10,16 @@ const stdMocks = require('std-mocks')
 describe('releases:retry', function () {
   beforeEach(() => cli.mockConsole())
 
+  it('errors when there are no releases yet', function () {
+    let api = nock('https://api.heroku.com:443')
+      .get('/apps/myapp/releases')
+      .reply(200, [])
+    return cmd.run({app: 'myapp'})
+      .then(() => expect(cli.stdout).to.equal(''))
+      .then(() => expect(cli.stderr).to.contain('No release found for this app'))
+      .then(() => api.done())
+  })
+
   it('retries the release', function () {
     let api = nock('https://api.heroku.com:443')
       .get('/apps/myapp/releases')

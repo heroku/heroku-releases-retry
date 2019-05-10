@@ -21,7 +21,7 @@ function * run (context, heroku) {
     let r = yield heroku.post(`/apps/${context.app}/releases`, {
       body: {
         slug: release.slug.id,
-        description: `Retrying v${release.version}`
+        description: `Retry of v${release.version}: ${release.description}`
       }
     })
 

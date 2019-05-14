@@ -23,8 +23,8 @@ describe('releases:retry', function () {
   it('retries the release', function () {
     let api = nock('https://api.heroku.com:443')
       .get('/apps/myapp/releases')
-      .reply(200, [{ 'slug': { id: 'slug_uuid' }, version: 40 }])
-      .post('/apps/myapp/releases', { slug: 'slug_uuid', description: 'Retrying v40' })
+      .reply(200, [{ 'slug': { id: 'slug_uuid' }, version: 40, description: 'A release' }])
+      .post('/apps/myapp/releases', { slug: 'slug_uuid', description: 'Retry of v40: A release' })
       .reply(200, {})
     return cmd.run({app: 'myapp'})
       .then(() => api.done())
@@ -37,8 +37,8 @@ describe('releases:retry', function () {
       .reply(200, 'Release Output Content')
     let api = nock('https://api.heroku.com:443')
       .get('/apps/myapp/releases')
-      .reply(200, [{ 'slug': { id: 'slug_uuid' }, version: 40 }])
-      .post('/apps/myapp/releases', { slug: 'slug_uuid', description: 'Retrying v40' })
+      .reply(200, [{ 'slug': { id: 'slug_uuid' }, version: 40, description: 'A release' }])
+      .post('/apps/myapp/releases', { slug: 'slug_uuid', description: 'Retry of v40: A release' })
       .reply(200, {output_stream_url: 'https://busl.test/streams/release.log'})
 
     return cmd.run({app: 'myapp'})
@@ -56,8 +56,8 @@ describe('releases:retry', function () {
       .reply(404, '')
     let api = nock('https://api.heroku.com:443')
       .get('/apps/myapp/releases')
-      .reply(200, [{ 'slug': { id: 'slug_uuid' }, version: 40 }])
-      .post('/apps/myapp/releases', { slug: 'slug_uuid', description: 'Retrying v40' })
+      .reply(200, [{ 'slug': { id: 'slug_uuid' }, version: 40, description: 'A release' }])
+      .post('/apps/myapp/releases', { slug: 'slug_uuid', description: 'Retry of v40: A release' })
       .reply(200, {version: 1, output_stream_url: 'https://busl.test/streams/release.log'})
 
     return cmd.run({app: 'myapp'})

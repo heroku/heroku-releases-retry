@@ -14,3 +14,13 @@ Run the following command:
 Retry the latest release:
 
 > heroku releases:retry --app happy-samurai-42
+
+## Usage with container apps
+
+The plugin doesn't support container apps. You will get the following error:
+
+```
+Cannot read property 'id' of null
+```
+
+You need to push a new image instead of using this plugin.

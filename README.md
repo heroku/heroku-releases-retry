@@ -1,5 +1,10 @@
 # Releases Retry [![Build Status](https://travis-ci.org/heroku/heroku-releases-retry.svg?branch=master)](https://travis-ci.org/heroku/releases-retry)
 
+> [!CAUTION]
+> This plugin is **not** supported for Heroku Fir applications.
+> See [this devcenter article](https://devcenter.heroku.com/articles/generations#fir) for more information
+> regarding the new Fir platform.
+
 This plugin is meant to be used with apps using [Release Phase](https://devcenter.heroku.com/articles/release-phase).  
 It will take the latest release in an app, and create a new one identical to it. That will trigger a new release-phase command, allowing for retrying them.
 

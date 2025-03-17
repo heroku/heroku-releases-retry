@@ -2,7 +2,7 @@
 
 > [!CAUTION]
 > This plugin is **not** supported for Heroku Fir applications.
-> See [this article](https://blog.heroku.com/planting-new-platform-roots-cloud-native-fir) for more information
+> See [this article](https://devcenter.heroku.com/articles/generations#fir) for more information
 > regarding the new Fir platform.
 
 This plugin is meant to be used with apps using [Release Phase](https://devcenter.heroku.com/articles/release-phase).  

@@ -1,5 +1,7 @@
 # Releases Retry [![Build Status](https://travis-ci.org/heroku/heroku-releases-retry.svg?branch=master)](https://travis-ci.org/heroku/releases-retry)
 
+**NOTE**: This plugin has been archived and is no longer maintained.
+
 > [!CAUTION]
 > This plugin is **not** supported for Heroku Fir applications.
 > See [this devcenter article](https://devcenter.heroku.com/articles/generations#fir) for more information

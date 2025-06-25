@@ -4,6 +4,7 @@ let cli = require('heroku-cli-util')
 let co = require('co')
 
 function * run (context, heroku) {
+  cli.warn('This command is now available as part of the Heroku CLI and this plugin has been archived. Please uninstall this plugin by running `heroku plugins:uninstall heroku-releases-retry`.')
   function getLatestRelease () {
     return heroku.request({
       path: `/apps/${context.app}/releases`,

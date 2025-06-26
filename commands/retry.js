@@ -1,10 +1,13 @@
 'use strict'
 
 let cli = require('heroku-cli-util')
+let color = require('@heroku-cli/color')
 let co = require('co')
 
 function * run (context, heroku) {
-  cli.warn('This command is now available as part of the Heroku CLI and this plugin has been archived. Please uninstall this plugin by running `heroku plugins:uninstall heroku-releases-retry`.')
+  cli.warn(`This command is now available as part of the Heroku CLI. Uninstall this archived plugin by running ${color.cmd('heroku plugins:uninstall heroku-releases-retry')}.`)
+  return
+
   function getLatestRelease () {
     return heroku.request({
       path: `/apps/${context.app}/releases`,

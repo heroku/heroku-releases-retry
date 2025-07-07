@@ -13,9 +13,7 @@
   ],
   "license": "ISC",
   "scripts": {
-    "test": "TZ=utc nyc mocha && standard",
-    "preversion": "npm test",
-    "postversion": "npm publish && git push && git push --tags"
+    "test": "TZ=utc nyc mocha && standard"
   },
   "dependencies": {
     "@heroku-cli/color": "2.0.4",
